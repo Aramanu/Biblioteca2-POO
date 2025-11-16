@@ -1,0 +1,89 @@
+{
+  "livros": [
+    {
+      "id": "1",
+      "titulo": "Aprendendo JavaScript",
+      "autor": "João Silva",
+      "isbn": "987654",
+      "anoPublicacao": 2020,
+      "status": "Indisponivel"
+    },
+    {
+      "id": "2",
+      "titulo": "O Tempo e o Vento",
+      "autor": "Erico Verissimo",
+      "isbn": "654328",
+      "anoPublicacao": 1958,
+      "status": "Indisponivel"
+    },
+    {
+      "id": "3",
+      "titulo": "A casa Caiu",
+      "autor": "Salvador Lima",
+      "isbn": "659874",
+      "anoPublicacao": 2011,
+      "status": "Disponivel"
+    },
+    {
+      "id": "45eb",
+      "titulo": "A Casa de Papel",
+      "autor": "ESpanhol",
+      "isbn": "659874",
+      "anoPublicacao": 2022,
+      "status": "Liberado"
+    }
+  ],
+  "membro": [
+    {
+      "id": "6885",
+      "nome": "Aramanu Rocha",
+      "endereço": "Av. 25 Julho, 755",
+      "telefone": "53999742271",
+      "nrMatricula": "12354"
+    },
+    {
+      "id": "8c92",
+      "nome": "Veronica Rodrigues",
+      "endereço": "Av. 25 Julho, 755",
+      "telefone": "53999742271",
+      "nrMatricula": "523641"
+    }
+  ],
+  "emprestimos": [
+    {
+      "id": "1",
+      "idLivro": "1",
+      "idMembro": "1",
+      "dataEmprestimo": "01/09/2023",
+      "dataDevolucao": "15/09/2023"
+    },
+    {
+      "id": "f49c",
+      "idLivro": "2",
+      "idMembro": "8c92",
+      "dataEmprestimo": "10/11/2025",
+      "dataDevolucao": "12/11/2025"
+    },
+    {
+      "id": "b91e",
+      "idLivro": "45eb",
+      "idMembro": "6885",
+      "dataEmprestimo": "11/01/2025",
+      "dataDevolucao": ""
+    },
+    {
+      "id": "6ec8",
+      "idLivro": "3",
+      "idMembro": "6885",
+      "dataEmprestimo": "16/11/2025",
+      "dataDevolucao": ""
+    },
+    {
+      "id": "cb1e",
+      "idLivro": "3",
+      "idMembro": "8c92",
+      "dataEmprestimo": "16/11/2025",
+      "dataDevolucao": "17/11/2025"
+    }
+  ]
+}
