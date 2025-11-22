@@ -1,0 +1,31 @@
+PessoaTeste - Foi criado para que pudesse testar o metodo
+listarMembro já que Pessoa é uma classe abstrata e nao podemos
+criar instancias diretamente dela.
+
+Classe Pessoa -> Alterado o metodo abstrato listarMembro() para string e a modificado o log para return;
+
+Pessoa.test.ts -> 
+- Primeiramente é criada uma Pessoa para realizar o PessoaTeste
+pois nao podemos criar instancias diretamente na classe abstrata.
+- Depois são feitos testes basicos de criar uma instancia e acessar os getters;
+- Teste do Id nulo : Como não existe nenhuma trava pro nosso id, ele deve permitir 
+o cadastro do id nulo;
+- Como nossa classe abstrata possou um metodo abstrato declarado, ele obrigatoriamente
+deve obrigar essa implementação, no teste ele verifica se temos essa Função com o "typeof".
+
+Membro.test.ts -> 
+- Faz a importação diretamente do Membro;
+- Testa a criação de um novo membro;
+- Testa o setter de alteração da matricula do membro;
+- Testa a listagem de informações do membro;
+
+Livro.test.ts ->
+- Testa a criação da instancia do Livro;
+-Testa o setter para alteração das propriedades do livro;
+- Testa a listagem de informações do livro.
+
+Emprestimo.test.ts -> 
+- Testa a criação da instancia do Emprestimo;
+- Testa o setter para alteração das propriedades de Emprestimo;
+- Lista as informações de Emprestimo.
+

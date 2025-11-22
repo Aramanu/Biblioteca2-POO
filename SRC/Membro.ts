@@ -19,7 +19,7 @@ export default class Membro extends Pessoa {
         this._nrMatricula = nrMatricula;
     }
 
-    public listarMembro(): void {
-        console.log(`[ID: ${this.id}] Nome: ${this._nome}, Matrícula: ${this._nrMatricula}, Endereço: ${this._endereço}, Telefone: ${this._telefone}`);
+    public listarMembro(): string {
+        return `[ID: ${this.id}] Nome: ${this._nome}, Matrícula: ${this._nrMatricula}, Endereço: ${this._endereço}, Telefone: ${this._telefone}`;
     }
 }

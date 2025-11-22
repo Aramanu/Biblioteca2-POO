@@ -17,5 +17,5 @@ export default abstract class Pessoa  {
       return this._telefone;
     }
 
-    public abstract listarMembro(): void;
+    public abstract listarMembro(): string;
 }
