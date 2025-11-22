@@ -1,11 +1,12 @@
-import axios, {AxiosInstance} from "axios";
+import { AxiosInstance } from "axios";
 import Livro from "../SRC/Livro";
+import { api } from "./api";
 
 export class LivroService {
     private api: AxiosInstance;
-    private readonly API_URL = "http://localhost:3000/livros";
+    private readonly API_URL = "/livros";
     constructor() {
-        this.api = axios.create();
+        this.api = api;
     }
 
     public async listar(): Promise<Livro[]> {

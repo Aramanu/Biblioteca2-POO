@@ -1,11 +1,12 @@
-import axios, {AxiosInstance} from "axios";
+import { AxiosInstance } from "axios";
 import Membro from "../SRC/Membro";
+import { api } from "./api";
 
 export class MembroService {
     private api: AxiosInstance;
-    private readonly API_URL = "http://localhost:3000/membro";
+    private readonly API_URL = "/membros";
     constructor() {
-        this.api = axios.create();
+        this.api = api;
     }   
     
     public async listar(): Promise<Membro[]> {

@@ -12,10 +12,15 @@ const teclado = Prompt();
 const livroService = new LivroService();
 
 async function listarLivros() {
-    let livros = await livroService.listar();
-    livros.forEach((livro: Livro) => 
-        console.log(livro.listarLivro())
-    );
+    try {
+        let livros = await livroService.listar();
+        livros.forEach((livro: Livro) => 
+            console.log(livro.listarLivro())
+        );
+    } catch (error: any) {
+        console.error("Erro ao listar livros:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
 async function adicionarLivro() {
@@ -94,10 +99,15 @@ async function deletarLivro() {
 const membroService = new MembroService();
 
 async function listarMembros() {    
-    let membros = await membroService.listar();
-    membros.forEach((membro: Membro) => 
-        membro.listarMembro()
-    );
+    try {
+        let membros = await membroService.listar();
+        membros.forEach((membro: Membro) => 
+          membro.listarMembro()
+        );
+    } catch (error: any) {
+        console.error("Erro ao listar membros:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
 async function adicionarMembro() {
@@ -140,10 +150,15 @@ async function deletarMembro() {
 const emprestimoService = new EmprestimoService();
 
 async function listarEmprestimos() {
-    let emprestimos = await emprestimoService.listar();
-    emprestimos.forEach((emprestimo: Emprestimo) => 
-        console.log(emprestimo.listarEmprestimo())
-   );
+    try {
+        let emprestimos = await emprestimoService.listar();
+        emprestimos.forEach((emprestimo: Emprestimo) => 
+            console.log(emprestimo.listarEmprestimo())
+       );
+    } catch (error: any) {
+        console.error("Erro ao listar empréstimos:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
 async function adicionarEmprestimo() {

@@ -1,16 +1,12 @@
-import axios, {AxiosInstance} from "axios";
+import { AxiosInstance } from "axios";
 import Emprestimo from "../SRC/Emprestimo";
-import http from "http";
+import { api } from "./api";
 
 export class EmprestimoService {
   private api: AxiosInstance;
-  private readonly API_URL = "http://localhost:3000/emprestimos";
+  private readonly API_URL = "/emprestimos";
   constructor() {
-    this.api = axios.create({
-      baseURL: "http://localhost:3000",
-      httpAgent: new http.Agent({ keepAlive: false }),
-      timeout: 5000,
-    });
+    this.api = api;
   }
 
   public async listar(): Promise<Emprestimo[]> {

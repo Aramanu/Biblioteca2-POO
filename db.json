@@ -31,9 +31,17 @@
       "isbn": "659874",
       "anoPublicacao": 2022,
       "status": "Liberado"
+    },
+    {
+      "id": "6a45",
+      "titulo": "A Bela e a Fera",
+      "autor": "Gabrielle Barbot",
+      "isbn": "8538093355",
+      "anoPublicacao": 1740,
+      "status": "Disponivel"
     }
   ],
-  "membro": [
+  "membros": [
     {
       "id": "6885",
       "nome": "Aramanu Rocha",

@@ -30,6 +30,9 @@ O sistema deve ser capaz de realizar as seguintes operações:
 
 ### Requisitos Técnicos:
 
+
+
+
 - **Classes e Objetos:**
     - Criar classes para Livro, Membro e Empréstimo.
     - Utilizar encapsulamento para proteger os atributos das classes.
