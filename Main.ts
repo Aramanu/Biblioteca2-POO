@@ -102,7 +102,7 @@ async function listarMembros() {
     try {
         let membros = await membroService.listar();
         membros.forEach((membro: Membro) => 
-          membro.listarMembro()
+          console.log(membro.listarMembro())
         );
     } catch (error: any) {
         console.error("Erro ao listar membros:", error.message);
@@ -111,38 +111,55 @@ async function listarMembros() {
 }
 
 async function adicionarMembro() {
-    console.log("\n --- Adicionar Membro --- ");
-    const nome = teclado("Nome: ").trim();
-    const endereço = teclado("Endereço: ").trim();    
-    const telefone = teclado("Telefone: ").trim();
-    const nrMatricula = teclado("Número de Matrícula: ").trim();    
-    const novoMembroData = new Membro(nome, endereço, telefone, nrMatricula);
-    const novoMembro = await membroService.adicionar(novoMembroData);  
-    console.log("Membro adicionado com sucesso:");
+    try {
+        console.log("\n --- Adicionar Membro --- ");
+        const nome = teclado("Nome: ").trim();
+        const endereço = teclado("Endereço: ").trim();    
+        const telefone = teclado("Telefone: ").trim();
+        const nrMatricula = teclado("Número de Matrícula: ").trim();    
+        const novoMembroData = new Membro(nome, endereço, telefone, nrMatricula);
+        const novoMembro = await membroService.adicionar(novoMembroData);  
+        console.log("Membro adicionado com sucesso:");
+        console.log(novoMembro.listarMembro());
+    } catch (error: any) {
+        console.error("Erro ao adicionar membro:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
 async function atualizarMembro() {
-    console.log("\n --- Atualizar Membro --- ");
-    const id = teclado("ID do Membro a ser atualizado: ").trim();   
-    const nome = teclado("Novo Nome: ").trim();
-    const endereço = teclado("Novo Endereço: ").trim();    
-    const telefone = teclado("Novo Telefone: ").trim();
-    const nrMatricula = teclado("Novo Número de Matrícula: ").trim();
-    const novosDados = {
-        nome,
-        endereço,
-        telefone,
-        nrMatricula
-    };
-    const membroAtualizado = await membroService.atualizar(id, novosDados);
-    console.log("Membro atualizado com sucesso:");
+    try {
+        console.log("\n --- Atualizar Membro --- ");
+        const id = teclado("ID do Membro a ser atualizado: ").trim();   
+        const nome = teclado("Novo Nome: ").trim();
+        const endereço = teclado("Novo Endereço: ").trim();    
+        const telefone = teclado("Novo Telefone: ").trim();
+        const nrMatricula = teclado("Novo Número de Matrícula: ").trim();
+        const novosDados = {
+            nome,
+            endereço,
+            telefone,
+            nrMatricula
+        };
+        const membroAtualizado = await membroService.atualizar(id, novosDados);
+        console.log("Membro atualizado com sucesso:");
+        console.log(membroAtualizado.listarMembro());
+    } catch (error: any) {
+        console.error("Erro ao atualizar membro:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
 async function deletarMembro() {
-    console.log("\n --- Deletar Membro --- ");
-    const id = teclado("ID do Membro a ser deletado: ").trim();
-    await membroService.deletar(id);
-    console.log("Membro deletado com sucesso.");
+    try {
+        console.log("\n --- Deletar Membro --- ");
+        const id = teclado("ID do Membro a ser deletado: ").trim();
+        await membroService.deletar(id);
+        console.log("Membro deletado com sucesso.");
+    } catch (error: any) {
+        console.error("Erro ao deletar membro:", error.message);
+        console.log("Verifique se o json-server está rodando: npx json-server --watch db.json --port 3000");
+    }
 }
 
  // Funçoes do Emprestimo

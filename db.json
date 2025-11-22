@@ -38,23 +38,30 @@
       "autor": "Gabrielle Barbot",
       "isbn": "8538093355",
       "anoPublicacao": 1740,
-      "status": "Disponivel"
+      "status": "Indisponivel"
     }
   ],
   "membros": [
-    {
-      "id": "6885",
-      "nome": "Aramanu Rocha",
-      "endereço": "Av. 25 Julho, 755",
-      "telefone": "53999742271",
-      "nrMatricula": "12354"
-    },
     {
       "id": "8c92",
       "nome": "Veronica Rodrigues",
       "endereço": "Av. 25 Julho, 755",
       "telefone": "53999742271",
       "nrMatricula": "523641"
+    },
+    {
+      "id": "a923",
+      "nome": "Enzo Rodrigues",
+      "endereço": "Av. 25 Julho 755",
+      "telefone": "53 999999999",
+      "nrMatricula": "3589654"
+    },
+    {
+      "id": "eb7c",
+      "nome": "Vivian Oliveira",
+      "endereço": "Av.  25 Julho 755",
+      "telefone": "53 999336666",
+      "nrMatricula": "3654123"
     }
   ],
   "emprestimos": [
@@ -84,7 +91,7 @@
       "idLivro": "3",
       "idMembro": "6885",
       "dataEmprestimo": "16/11/2025",
-      "dataDevolucao": ""
+      "dataDevolucao": "21/11/2025"
     },
     {
       "id": "cb1e",
@@ -92,6 +99,13 @@
       "idMembro": "8c92",
       "dataEmprestimo": "16/11/2025",
       "dataDevolucao": "17/11/2025"
+    },
+    {
+      "id": "ede3",
+      "idLivro": "6a45",
+      "idMembro": "eb7c",
+      "dataEmprestimo": "21/11/2025",
+      "dataDevolucao": ""
     }
   ]
 }
